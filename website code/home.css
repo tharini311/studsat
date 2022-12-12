@@ -1,0 +1,187 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.hero{
+    width: 100%;  
+    height: 100vh; 
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));     
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+/* logo */
+.logo{
+    width: 300px;
+    float:left;
+    height:auto;
+}
+/* nav bar */
+nav{
+    width: 100%; 
+    position: absolute;
+    top: -13%;
+    left: -3%;
+    padding: 20px 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li{
+    display:inline-block ;
+    margin-left: 40px;
+}
+nav ul li a{
+    text-decoration: none; 
+    color: aliceblue;
+    font-size: 20px;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+/* nav animation */
+@media screen and (min-width: 768px) {
+    nav ul li a {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+    }
+    nav ul li a:hover{
+          text-decoration: none;
+    }
+    nav ul li a:after {
+        content: ""; 
+        display: block;
+        position: absolute; 
+        width: 0;
+        bottom: 0; 
+        height: 2px;
+        margin: -5px 0;
+        left: 0;
+        background-color: white;
+        transition: all 0.3s ease-in 0s;
+    }
+    nav ul li a:hover:after {
+        width: 100%;
+    }
+}
+/* title */
+.content{
+    text-align: center;
+}
+/* STUDSAT CLUB */
+.content h1{
+    font-size: 160px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    transition: 0.5s;
+}
+.content h1:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+/* TEXT */
+.content h2 {
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 36px;
+    margin-bottom: 0;
+}
+#intro {
+    position: relative;
+    top: 50%;
+    left: 8%;
+    width: 54ch;
+    animation: typing 4s steps(100), blink .2s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 30px;
+}   
+@keyframes typing {
+    from {width: 0}
+}
+@keyframes blink {
+    50% {border-color: transparent}
+}
+/* JOIN US */
+.content a{
+    border:1px solid #fff;
+    padding:10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top:20px;
+    display:inline-block;
+    color:#fff;
+}
+.content a:hover{
+    background-color:#1d9ce1;
+    color:#333;
+}
+
+/* Footer */
+footer .social {
+    background-color:rgb(33, 42, 50);
+    display: flex;
+    justify-content: center;
+    margin:0% 0% 0% 0%;
+    min-height: 10vh;
+}
+#address{
+    display: flex;
+    position: absolute;
+    top: 101% ;
+    left: 8%;
+    color: #1d9ce1;
+}
+#facebook{
+    position: absolute;
+    top: 103%;
+    left: 69%;
+    color: #1755db ;
+}
+#twitter{
+    position: absolute;
+    top: 103%;
+    left: 75%;
+    color:#0097e6 ;
+}#website{
+    position: absolute;
+    top: 103%;
+    left: 80%;
+    color: #1d9ce1;
+}#instagram{
+    position: absolute;
+    top: 103%;
+    left: 86%;
+    color: #e84393;
+}
+.social h6{
+    position: absolute;
+    left: 61%;
+    font-size: 25px;
+    color: white;
+}
+/* background video */
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio:16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
